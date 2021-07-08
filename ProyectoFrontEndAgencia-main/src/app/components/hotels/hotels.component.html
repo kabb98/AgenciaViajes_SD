@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-8">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Num Habitaciones</th>
+          <th>Fecha</th>
+          <th>Precio</th>
+          <th>Ciudad</th>
+          <th>Reservar</th>
+        </tr>
+      </thead>
+
+      <!--Contenido-->
+      <tbody>
+        <tr *ngFor="let hotel of hotelService.hotels">
+          <td align="center"> {{ hotel.nombre}}</td>
+          <td align="center"> {{ hotel.numHab }} </td>
+          <td align="center"> {{ hotel.fecha }} </td>
+          <td align="center"> {{ hotel.precio }} </td>
+          <td align="center"> {{ hotel.ciudad }} </td>
+
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="reservarHotel(hotel)" >
+              <i class="material-icons">Reservar</i>
+            </button>
+          </td>
+        </tr>
+
+        
+
+      </tbody>
+    </table>
+  </div>
+</div>

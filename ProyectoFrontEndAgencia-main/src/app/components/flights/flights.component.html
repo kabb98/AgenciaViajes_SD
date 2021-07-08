@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-8">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Origen</th>
+          <th>Destino</th>
+          <th>fechaIda</th>
+          <th>fechaVuelta</th>
+          <th>precio</th>
+          <th>Reservar</th>
+        </tr>
+      </thead>
+
+      <!--Contenido-->
+      <tbody>
+        <tr *ngFor="let flight of flightService.flights">
+          <td align="center"> {{ flight.origen }} </td>
+          <td align="center"> {{ flight.destino }} </td>
+          <td align="center"> {{ flight.fechaIda }} </td>
+          <td align="center"> {{ flight.fechaVuelta }} </td>
+          <td align="center"> {{ flight.precio }} </td>
+
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="reservarCoche(car)">
+              <i class="material-icons">Reservar</i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

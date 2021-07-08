@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-4 mx-auto pt-5">
+    <div class="card">
+      <div class="card-header">
+        Crea tu Cuenta
+      </div>
+      <div class="card-body">
+        <form (submit)="signUp()">
+          <div class="form-group">
+            <input type="text" [(ngModel)]="user.email" name="email" placeholder="Email" class="form-control" required
+              autofocus>
+          </div>
+
+          <div class="form-group">
+            <input type="text" [(ngModel)]="user.nombre" name="nombre" placeholder="Nombre" class="form-control"
+              required>
+          </div>
+          <div class="form-group">
+            <input type="password" [(ngModel)]="user.password" name="password" placeholder="Contraseña"
+              class="form-control" required>
+          </div>
+
+          <button type="submit" class="btn btn-block btn-primary" ng-disabled="projectForm.$invalid">
+            Registrarte
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

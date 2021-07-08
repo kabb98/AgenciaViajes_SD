@@ -1,0 +1,94 @@
+<div class="row">
+
+  <!--
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <form #carForm="ngForm" (ngSubmit)="addCar(carForm)">
+
+          <input type="hidden" name="_id" [(ngModel)]="carService.selectedCar._id">
+          <div class="form-group mb-4">
+            <label for="nombreCoche" class="form-label">Nombre coche</label>
+            <input type="text" class="form-control" id="nombreCoche" name="nombre"
+              placeholder="Introduce el nombre del coche" [(ngModel)]="carService.selectedCar.nombre">
+          </div>
+
+          <div class="form-group mb-4">
+            <label for="org" class="form-label">Origen</label>
+            <input type="text" class="form-control" id="org" name="origen" placeholder="Introduce el origen"
+              [(ngModel)]="carService.selectedCar.origen">
+          </div>
+
+          <div class="form-group mb-4">
+            <label for="dest" class="form-label">Destino</label>
+            <input type="text" class="form-control" id="dest" name="destino" placeholder="Introduce el destino"
+              [(ngModel)]="carService.selectedCar.destino">
+          </div>
+
+
+          <div class="form-group mb-4">
+            <label for="fecI" class="form-label">Fecha Inicio</label>
+            <input type="date" class="form-control" id="fecI" name="fechaIda" min="2021-06-15" max="2030-12-31"
+              [(ngModel)]="carService.selectedCar.fechaIda">
+          </div>
+
+          <div class="form-group mb-4">
+            <label for="fecV" class="form-label">Fecha Vuelta</label>
+            <input type="date" class="form-control" id="fecV" name="fechaVuelta" min="2021-06-15" max="2030-12-31"
+              [(ngModel)]="carService.selectedCar.fechaVuelta">
+          </div>
+
+          <div class="form-group mb-4">
+            <label for="prec" class="form-label">Precio</label>
+            <input type="number" class="form-control" id="prec" name="precio" placeholder="Introduce el precio"
+              [(ngModel)]="carService.selectedCar.precio">
+          </div>
+
+
+
+
+          <button class="btn btn-primary mt-2 btn-sm" style="margin-right: 1em;">
+            Crear
+          </button>
+          <button class="btn btn-secondary mt-2 btn-sm" (click)="resetForm(carForm)">
+            Limpiar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+-->
+
+
+
+  <div class="col-md-8">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Origen</th>
+          <th>Destino</th>
+          <th>Precio</th>
+          <th>Reservar</th>
+        </tr>
+      </thead>
+
+      <!--Contenido-->
+      <tbody>
+        <tr *ngFor="let car of cars">
+          <td> {{car.nombre}}</td>
+          <td> {{ car.origen }} </td>
+          <td> {{ car.destino }} </td>
+          <td> {{ car.precio }} </td>
+
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="reservarCoche(car)">
+              <i class="material-icons">Reservar</i>
+            </button>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

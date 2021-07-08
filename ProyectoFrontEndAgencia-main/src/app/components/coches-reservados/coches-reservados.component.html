@@ -1,0 +1,26 @@
+<div>
+  <div class="col-md-8">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Origen</th>
+          <th>Destino</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+
+      <!--Contenido-->
+      <tbody>
+        <tr *ngFor="let car of cars">
+          <td> {{car.nombre}}</td>
+          <td> {{ car.origen }} </td>
+          <td> {{ car.destino }} </td>
+          <td> {{ car.precio }} </td>
+
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
